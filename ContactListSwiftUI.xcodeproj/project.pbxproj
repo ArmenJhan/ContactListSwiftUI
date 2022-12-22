@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C05FE58929549DF700ACB585 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05FE58829549DF700ACB585 /* Person.swift */; };
 		C076B96B29549C7B00AD9AFB /* ContactListSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C076B96A29549C7B00AD9AFB /* ContactListSwiftUIApp.swift */; };
 		C076B96D29549C7B00AD9AFB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C076B96C29549C7B00AD9AFB /* ContentView.swift */; };
 		C076B96F29549C7C00AD9AFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C076B96E29549C7C00AD9AFB /* Assets.xcassets */; };
 		C076B97229549C7C00AD9AFB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C076B97129549C7C00AD9AFB /* Preview Assets.xcassets */; };
+		C076B97929549CA200AD9AFB /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C076B97829549CA200AD9AFB /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C05FE58829549DF700ACB585 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		C076B96729549C7B00AD9AFB /* ContactListSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactListSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C076B96A29549C7B00AD9AFB /* ContactListSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListSwiftUIApp.swift; sourceTree = "<group>"; };
 		C076B96C29549C7B00AD9AFB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C076B96E29549C7C00AD9AFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C076B97129549C7C00AD9AFB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C076B97829549CA200AD9AFB /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C05FE58729549DC900ACB585 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C076B97829549CA200AD9AFB /* DataStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C05FE58A29549DFD00ACB585 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C05FE58829549DF700ACB585 /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C076B95E29549C7B00AD9AFB = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +73,8 @@
 			children = (
 				C076B96A29549C7B00AD9AFB /* ContactListSwiftUIApp.swift */,
 				C076B96C29549C7B00AD9AFB /* ContentView.swift */,
+				C05FE58A29549DFD00ACB585 /* Models */,
+				C05FE58729549DC900ACB585 /* Services */,
 				C076B96E29549C7C00AD9AFB /* Assets.xcassets */,
 				C076B97029549C7C00AD9AFB /* Preview Content */,
 			);
@@ -138,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C076B96D29549C7B00AD9AFB /* ContentView.swift in Sources */,
+				C076B97929549CA200AD9AFB /* DataStore.swift in Sources */,
+				C05FE58929549DF700ACB585 /* Person.swift in Sources */,
 				C076B96B29549C7B00AD9AFB /* ContactListSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
