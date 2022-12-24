@@ -15,7 +15,7 @@ struct ContactListView: View {
         NavigationStack {
             List(contactLists) { contact in
                 NavigationLink(destination: ContactProfileView(contact: contact)) {
-                    Text("\(contact.fullname) ")
+                    Text(contact.fullname)
                 }
             }
             .listStyle(.plain)

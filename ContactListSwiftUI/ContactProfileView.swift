@@ -12,29 +12,23 @@ struct ContactProfileView: View {
     let contact: Person
     
     var body: some View {
-        VStack(spacing: 10) {
-            Image(systemName: "person.text.rectangle.fill")
-                .resizable()
-                .frame(width: 200, height: 150)
+        List {
             HStack {
-                Image(systemName: "phone")
-                Text("\(contact.phoneNumber)")
+                Spacer()
+                Image(systemName: "person.fill")
+                    .resizable()
+                    .frame(width: 200, height: 150)
                 Spacer()
             }
-            HStack{
-                Image(systemName: "tray")
-                Text("\(contact.email)")
-                Spacer()
-            }
-            .navigationTitle("\(contact.fullname)")
-            Spacer()
+            Label(contact.phoneNumber, systemImage: "phone")
+            Label(contact.email,systemImage: "tray")
         }
-        .padding()
+        .navigationTitle(contact.fullname)
     }
 }
 
 struct ContactProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactProfileView(contact: Person.getPerson())
+        ContactProfileView(contact: Person.getPersons().first!)
     }
 }

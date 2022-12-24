@@ -16,29 +16,11 @@ struct Person: Identifiable {
         "\(name) \(surname)"
     }
     
-    static func getPerson() -> Person {
-        
-        let id = DataStore.shared.id
-        let names = DataStore.shared.names
-        let surnames = DataStore.shared.surnames
-        let emails = DataStore.shared.emails
-        let phoneNumbers = DataStore.shared.phoneNumbers
-        
-        let person = Person(
-            id: id[Int.random(in: 0..<id.count)],
-            name: names[Int.random(in: 0..<names.count)],
-            surname: surnames[Int.random(in: 0..<surnames.count)],
-            email: emails[Int.random(in: 0..<emails.count)],
-            phoneNumber: phoneNumbers[Int.random(in: 0..<phoneNumbers.count)]
-        )
-         return person
-    }
-    
     static func getPersons() -> [Person] {
         
         var persons: [Person] = []
         
-        let id = DataStore.shared.id
+        
         let names = DataStore.shared.names
         let surnames = DataStore.shared.surnames
         let emails = DataStore.shared.emails
@@ -53,7 +35,7 @@ struct Person: Identifiable {
         
         for index in 0..<iteration {
             let person = Person(
-                id: id[index],
+                id: index,
                 name: names[index],
                 surname: surnames[index],
                 email: emails[index],

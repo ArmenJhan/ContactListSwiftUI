@@ -14,14 +14,14 @@ struct AllContactsView: View {
     var body: some View {
         NavigationStack {
             List(contacts) { contact in
-                Section(header: Text("\(contact.fullname)")){
+                Section(header: Text(contact.fullname)){
                     HStack {
                         Image(systemName: "phone")
-                        Text("\(contact.phoneNumber)")
+                        Text(contact.phoneNumber)
                     }
                     HStack {
                         Image(systemName: "tray")
-                        Text("\(contact.email)")
+                        Text(contact.email)
                     }
                 }
             }
