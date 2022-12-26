@@ -15,16 +15,11 @@ struct AllContactsView: View {
         NavigationStack {
             List(contacts) { contact in
                 Section(header: Text(contact.fullname)){
-                    HStack {
-                        Image(systemName: "phone")
-                        Text(contact.phoneNumber)
-                    }
-                    HStack {
-                        Image(systemName: "tray")
-                        Text(contact.email)
-                    }
+                    Label(contact.phoneNumber, systemImage: "iphone")
+                    Label(contact.email,systemImage: "mail")
                 }
             }
+            .navigationTitle("Contact list")
         }
     }
 }

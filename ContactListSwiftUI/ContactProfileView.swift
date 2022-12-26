@@ -15,13 +15,13 @@ struct ContactProfileView: View {
         List {
             HStack {
                 Spacer()
-                Image(systemName: "person.fill")
+                Image(systemName: "person.text.rectangle")
                     .resizable()
                     .frame(width: 200, height: 150)
                 Spacer()
             }
-            Label(contact.phoneNumber, systemImage: "phone")
-            Label(contact.email,systemImage: "tray")
+            Label(contact.phoneNumber, systemImage: "iphone")
+            Label(contact.email,systemImage: "mail")
         }
         .navigationTitle(contact.fullname)
     }
